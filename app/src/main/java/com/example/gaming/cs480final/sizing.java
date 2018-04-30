@@ -1,6 +1,9 @@
 package com.example.gaming.cs480final;
 
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -36,6 +39,12 @@ public class sizing extends AppCompatActivity {
     private Cursor cursor;
     private TextView text;
     private final String file = "info.txt";
+    private NotificationManager mNotificationManager;
+    private Notification notifyDetails;
+    private int SIMPLE_NOTFICATION_ID;
+    private String contentTitle = "New Customer sent info!";
+    private String contentText = "Call them asap!";
+    private String tickerText = "Click Me !!!";
 
 
     @Override
@@ -52,8 +61,38 @@ public class sizing extends AppCompatActivity {
         OutValue =findViewById(R.id.OutValue);
         Chest =findViewById(R.id.Chest);
         send = findViewById(R.id.send);
+        mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
+        //create intent for action when notification selected
+        //from expanded status bar
+        Intent notifyIntent = new Intent(this, employeelogin.class);
+        //create pending intent to wrap intent so that it
+        //will fire when notification selected.
+        PendingIntent pendingIntent = PendingIntent.getActivity(
+                this, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        //build notification object and set parameters
+        notifyDetails =
+                new Notification.Builder(this)
+                        .setContentIntent(pendingIntent)
 
+                        .setContentTitle(contentTitle)   //set Notification text and icon
+                        .setContentText(contentText)
+                        .setSmallIcon(R.drawable.droid)
+
+                        .setTicker(tickerText)            //set status bar text
+
+                        .setWhen(System.currentTimeMillis())    //timestamp when event occurs
+
+                        .setAutoCancel(true)     //cancel Notification after clicking on it
+
+                        //set Android to vibrate when notified
+                        .setVibrate(new long[]{1000, 1000, 1000, 1000})
+
+                        // flash LED (color, on in millisec, off)
+                        //doesn't work for all handsets
+                        .setLights(Integer.MAX_VALUE, 500, 500)
+
+                        .build();
 
 
         // sets on click listener for send button, gathers all edittext values and concats them into one string variable "info" :(
@@ -110,8 +149,10 @@ public class sizing extends AppCompatActivity {
                     db.insert(Constants.TABLE_NAME, null, values);
                 }
                 catch(Exception e){
-                    Log.d("SQLite throw", e.toString());
+                    Log.d("SQLite implementation threw", e.toString());
                 }
+
+
             }
         });
 
