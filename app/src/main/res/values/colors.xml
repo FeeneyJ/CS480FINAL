@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textPrimary">#848484</color>
+    <color name="colorAccent">#886fa8</color>
+    <color name ="bgrd">#2e2c44</color>
+    <color name ="menu">#9792b7</color>
+    <color name ="menuitemtext">#1e1b35</color>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:name="http://schemas.android.com/tools">
+
+    <string-array name= "welcome">
+        <item> We'd Like to...</item>
+        <item> Cordially...</item>
+        <item> Welcome you to...</item>
+    </string-array>
+
+</resources>

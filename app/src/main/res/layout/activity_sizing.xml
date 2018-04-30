@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:fontFamily="@font/caviardreams"
+    android:background="@color/bgrd"
+    >
+
+
+    <TableRow>
+        <TextView
+            android:layout_span="4"
+            android:gravity="center"
+            android:text="Send us your sizing!"
+            android:textColor="@color/textPrimary"
+            android:fontFamily="@font/rechtmanplain"
+            android:textSize="45sp"
+            />
+    </TableRow>
+    <TableRow>
+
+        <TextView
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:text="Name:"
+            android:textColor="@color/textPrimary" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:hint="John Smith"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="Phone Number:"
+            android:textColor="@color/textPrimary"/>
+
+        <EditText
+            android:id="@+id/phonenumber"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:textColor="@color/textPrimary"
+            android:hint="999-999-9999"
+            android:textSize="16sp"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="Neck:"
+            android:textColor="@color/textPrimary"/>
+
+        <EditText
+            android:id="@+id/NeckValue"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:textColor="@color/textPrimary"
+            android:hint="Nearest 1/4 inch."
+            android:textSize="16sp"
+
+             />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="Sleeve:"
+            android:textColor="@color/textPrimary"/>
+
+        <EditText
+            android:id="@+id/SleeveValue"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:textColor="@color/textPrimary"
+            android:hint="Nearest 1/4 inch!"
+            android:textSize="16sp"
+
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="Waist:"
+            android:textColor="@color/textPrimary"/>
+
+        <EditText
+            android:id="@+id/WaistValue"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:textColor="@color/textPrimary"
+            android:hint="Nearest 1/2 inch!"
+            android:textSize="16sp"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="OutSeam:"
+            android:textColor="@color/textPrimary"/>
+
+        <EditText
+            android:id="@+id/OutValue"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:textColor="@color/textPrimary"
+            android:hint="Nearest 1/2 inch!"
+            android:textSize="16sp"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="Chest:"
+            android:textColor="@color/textPrimary"/>
+
+        <EditText
+            android:id="@+id/Chest"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:textColor="@color/textPrimary"
+            android:hint="Nearest 1/4 inch"
+            android:textSize="16sp"
+
+            />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/send"
+            android:gravity="center_horizontal"
+            android:layout_weight="4"
+            android:text="Send!"
+            android:textColor="@color/textPrimary"
+            android:shadowColor="@color/menu"
+
+            />
+
+    </TableRow>
+</TableLayout>

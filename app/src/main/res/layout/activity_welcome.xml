@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaming.cs480final.welcome"
+    android:id="@+id/activitiy_welcome">
+
+    <com.tomer.fadingtextview.FadingTextView
+        android:id="@+id/fading_text_view"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
+        app:texts="@array/welcome"
+        app:timeout="1000" />
+
+    <TextView
+        android:id="@+id/deluxtitle"
+        android:layout_width="288dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/deluxtitle"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <TextView
+        android:id="@+id/officialsupplier"
+        android:layout_width="283dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="296dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="47dp"
+        android:text="@string/officalsupplier"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deluxtitle" />
+
+    <TextView
+        android:id="@+id/nep"
+        android:layout_width="269dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="203dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/nep"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialsupplier" />
+
+    <TextView
+        android:id="@+id/opendaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="184dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginStart="134dp"
+        android:text="@string/opendaily"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nep" />
+
+    <TextView
+        android:id="@+id/dailytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/dailytime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opendaily" />
+
+    <ImageButton
+        android:id="@+id/twitter"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="58dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/twitter_icon"
+        android:src="@drawable/twitter_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/facebook"
+        app:layout_constraintTop_toBottomOf="@+id/dailytime" />
+
+    <ImageButton
+        android:id="@+id/facebook"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="58dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/facebook_icon"
+        android:src="@drawable/facebook_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/twitter"
+        app:layout_constraintStart_toEndOf="@+id/chrome"
+        app:layout_constraintTop_toBottomOf="@+id/dailytime" />
+
+    <ImageButton
+        android:id="@+id/instagram"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="63dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/instagram_icon"
+        android:src="@drawable/instagram_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chrome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailytime" />
+
+    <ImageButton
+        android:id="@+id/chrome"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/chrome_icon"
+        android:src="@drawable/chrome_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/facebook"
+        app:layout_constraintStart_toEndOf="@+id/instagram"
+        app:layout_constraintTop_toBottomOf="@+id/dailytime"
+        app:layout_constraintVertical_bias="0.363" />
+
+
+
+</android.support.constraint.ConstraintLayout>

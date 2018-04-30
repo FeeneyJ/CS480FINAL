@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:icon="@drawable/suit">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/sizing"
+        android:title="Sizing"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/contact"
+        android:title="Contact Us"
+        app:showAsAction="always"
+        tools:ignore="AppCompatResource"/>
+    <item
+        android:id="@+id/employeelogin"
+        android:title="Employee Login"
+        app:showAsAction="never"
+        />
+
+
+
+</menu>
+
