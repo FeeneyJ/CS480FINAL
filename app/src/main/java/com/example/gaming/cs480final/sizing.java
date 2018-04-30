@@ -1,5 +1,6 @@
 package com.example.gaming.cs480final;
 
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -68,6 +69,11 @@ public class sizing extends AppCompatActivity {
                 info += OutValue.getText().toString()+" ";
                 info += Chest.getText().toString()+" ";
 
+                //displays noti for successful button press
+                AlertDialog dialog = new AlertDialog.Builder(sizing.this).create();
+                //set message, title, and icon
+                dialog.setTitle("Thanks for sending us your info " + name.getText().toString() +"!");
+                dialog.show();
                 //writes info to log
                 Log.d("info stuff", info);
                 //writes info to txt file in directory

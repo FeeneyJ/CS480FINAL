@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -45,11 +47,15 @@ public class employeelogin extends AppCompatActivity implements TextToSpeech.OnI
         //references textview to variable
         text = findViewById(R.id.texte);
         speaker = new TextToSpeech(this, this);
-        List<String> info = Arrays.asList(FiletoStr(this).split(" "));
-        String str = "      New Customer Information!\n..." + "\nName:  " + info.get(0) + "\nPhone: " + info.get(1) + "\nNeck:   " + info.get(2) + "\nSleeve: " +info.get(3) + "\nWaist:   " + info.get(4) +"\nOutseam:   " + info.get(5) + "\nChest:  " + info.get(6) + "\n      please give them a call!";
-        text.setText(str);
-        speak(str);
-
+        try {
+            List<String> info = Arrays.asList(FiletoStr(this).split(" "));
+            String str = "      New Customer Information!\n..." + "\nName:  " + info.get(0) + "\nPhone: " + info.get(1) + "\nNeck:   " + info.get(2) + "\nSleeve: " + info.get(3) + "\nWaist:   " + info.get(4) + "\nOutseam:   " + info.get(5) + "\nChest:  " + info.get(6) + "\n      please give them a call!";
+            text.setText(str);
+            speak(str);
+        }
+        catch( Exception e){
+            Toast.makeText(this,("No new customer information"), Toast.LENGTH_LONG);
+        }
         // sets tasks, creates listadapter converter, creates reference to listview, and sets adapter to the listview
         String[] tasks = {"Sweeping", "Hemming","Sewing","Steaming","Cashiering","Doorman","Shoe Shinning"};
         ListAdapter la = new ArrayAdapter<String>(this,R.layout.item,tasks);
